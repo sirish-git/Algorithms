@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\srib_probs">
+      <UniqueIdentifier>{43d1c254-e803-42e9-a2c5-010de10cdd19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\trie">
+      <UniqueIdentifier>{e08d9a64-2c84-4591-a2be-780511600af4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Hash">
+      <UniqueIdentifier>{d9c2ccc4-1a8e-4efc-83f3-60b049e890d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\a_good_probs">
+      <UniqueIdentifier>{934e1f82-33fe-4777-8cd0-99431fc5e1f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\suffix_array">
+      <UniqueIdentifier>{6b8af1f0-a874-4575-a049-56f1b5aadce8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\grid-matrix">
+      <UniqueIdentifier>{83d98603-02d4-4f87-ae9e-0163575b217a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graph">
+      <UniqueIdentifier>{ff759f53-eae9-49eb-bddf-f335dead7018}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Tree">
+      <UniqueIdentifier>{4a00c8b5-bb80-475b-a886-dd08ae50f338}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DP">
+      <UniqueIdentifier>{c2c176ca-d2ca-4e5c-824a-4eca938e0408}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\z_Online Judges No-Category">
+      <UniqueIdentifier>{7082ed8d-d758-4390-8af4-d3c08d064236}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graph\bfs">
+      <UniqueIdentifier>{20510b0e-f9e5-4b18-b286-415c790528f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graph\dfs">
+      <UniqueIdentifier>{497cdee8-733d-4953-8481-1c922d0d1f27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sorting_priority_queue">
+      <UniqueIdentifier>{9adb4f81-01e6-471f-ad90-9e500b8f4f4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\back-tracking">
+      <UniqueIdentifier>{669f1301-de92-418f-9850-65de22246863}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\string_search">
+      <UniqueIdentifier>{f98f3995-32e0-4987-85cc-b8aab27bcc1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skip_list">
+      <UniqueIdentifier>{ed7c4860-3cf8-499d-8afc-b141a14de25f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\search">
+      <UniqueIdentifier>{4cd495d7-e262-4d7a-980e-389c6e0b51f5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\code_forces\code_forces_189a_cut_ribbons_max.c">
+      <Filter>Source Files\z_Online Judges No-Category</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\code_forces\code_forces_327a_flip_coins_max.c">
+      <Filter>Source Files\z_Online Judges No-Category</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\code_forces\Ncode_forces_466c.c">
+      <Filter>Source Files\z_Online Judges No-Category</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\good_probs\generate_all_permutations_no_order.c">
+      <Filter>Source Files\a_good_probs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\a_test_prototype.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\code_forces\code_forces_505c_jump_islands.c">
+      <Filter>Source Files\z_Online Judges No-Category</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\code_forces\Ncode_forces_349b.c">
+      <Filter>Source Files\z_Online Judges No-Category</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\code_forces\Ncode_forces_229d_increaseing_towers.c">
+      <Filter>Source Files\z_Online Judges No-Category</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\code_forces\Ncode_forces_725d.c">
+      <Filter>Source Files\z_Online Judges No-Category</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\code_forces\code_forces_734c.c">
+      <Filter>Source Files\z_Online Judges No-Category</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\code_forces\code_forces_465b.c">
+      <Filter>Source Files\z_Online Judges No-Category</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\code_forces\a_simple_prototype.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\code_forces\code_forces_873c.c">
+      <Filter>Source Files\z_Online Judges No-Category</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\trie\spoj_DICT.c">
+      <Filter>Source Files\trie</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\trie\spoj_PHONELST.c">
+      <Filter>Source Files\trie</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\trie\spoj_SUBXOR.c">
+      <Filter>Source Files\trie</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Hash\codeforces_4C.c">
+      <Filter>Source Files\Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\code_forces\code_forces_372B_div1.c">
+      <Filter>Source Files\z_Online Judges No-Category</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\good_probs\big_array_text_editor_SkipList.c">
+      <Filter>Source Files\a_good_probs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\suffix_array\spoj_SUBLEX_suffix_array.c">
+      <Filter>Source Files\suffix_array</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\suffix_array\spoj_SARRAY.c">
+      <Filter>Source Files\suffix_array</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\suffix_array\spoj_SUBST1_distinct_substrings.c">
+      <Filter>Source Files\suffix_array</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\suffix_array\spoj_DISUBSTR.c">
+      <Filter>Source Files\suffix_array</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\a_practice_test.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\code_chef\code_chef_PPTEST.c">
+      <Filter>Source Files\z_Online Judges No-Category</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\hacker_rank\hacker_rank_array-splitting.c">
+      <Filter>Source Files\z_Online Judges No-Category</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\hacker_rank\hacker_rank_maxsubarray.c">
+      <Filter>Source Files\z_Online Judges No-Category</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\hacker_rank\Nhacker_rank_mandragora.c">
+      <Filter>Source Files\z_Online Judges No-Category</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\top_coder\top_coder_srm596_D2_L2.c">
+      <Filter>Source Files\z_Online Judges No-Category</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\spoj\spoj_powercar.c">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\spoj\spoj_tourist.c">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\spoj\spoj_twends.c">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\spoj\Nspoj_deliver_pizza.c">
+      <Filter>Source Files\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\spoj\spoj_shpath_dijkstra.c">
+      <Filter>Source Files\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\spoj\spoj_DCEPC501.c">
+      <Filter>Source Files\z_Online Judges No-Category</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\spoj\spoj_jumpdora.c">
+      <Filter>Source Files\z_Online Judges No-Category</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\code_forces\Ncode_forces_20c_dijkstra.c">
+      <Filter>Source Files\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\code_forces\code_forces_213c_dp_grid.c">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graph\bfs\spoj_ELEVTRBL.c">
+      <Filter>Source Files\Graph\bfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graph\bfs\spoj_CLEANRBT.c">
+      <Filter>Source Files\Graph\bfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graph\dfs\Pass_spoj_allizwell.c">
+      <Filter>Source Files\Graph\dfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sorting_priority_queue\Pass_heap_sort.c">
+      <Filter>Source Files\sorting_priority_queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sorting_priority_queue\Pass_merge_sort.c">
+      <Filter>Source Files\sorting_priority_queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sorting_priority_queue\Pass_quick_sort.c">
+      <Filter>Source Files\sorting_priority_queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sorting_priority_queue\Pass_spoj_RMID2_priority_que.c">
+      <Filter>Source Files\sorting_priority_queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sorting_priority_queue\disk_scheduling_prioQ_srib.c">
+      <Filter>Source Files\sorting_priority_queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sorting_priority_queue\spoj_pqueue.c">
+      <Filter>Source Files\sorting_priority_queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\back-tracking\Pass_CF957a_ColoringCell.c">
+      <Filter>Source Files\back-tracking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\srib_probs\prof_24_03_18_AccurateCalC.c">
+      <Filter>Source Files\srib_probs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\string_search\Pass_Z_algorithm_hkEarth.c">
+      <Filter>Source Files\string_search</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\skip_list\text_editor_codechef.c">
+      <Filter>Source Files\skip_list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\srib_probs\prof_07_04_search_engine.c">
+      <Filter>Source Files\srib_probs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\search\Pass_binary_search_prefix_sum_spoj_ANARC05B.c">
+      <Filter>Source Files\search</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

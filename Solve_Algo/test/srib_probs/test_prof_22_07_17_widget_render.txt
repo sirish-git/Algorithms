@@ -1,0 +1,28 @@
+50
+3
+_type_followed_w_h_img_or_txt
+2
+5
+_type_followed_w_h_img_or_txt
+0
+3 2
+1 2 3
+4 5 6
+_type_followed_w_h_img_or_txt
+1
+hello widget0
+4
+_type_followed_w_h_img_or_txt
+2
+5
+_type_followed_w_h_img_or_txt
+2
+8
+_type_followed_w_h_img_or_txt
+0
+3 2
+1 2 3
+4 5 6
+_type_followed_w_h_img_or_txt
+1
+hello widget0
