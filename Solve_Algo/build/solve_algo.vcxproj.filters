@@ -217,5 +217,8 @@
     <ClCompile Include="..\src\search\Pass_binary_search_prefix_sum_spoj_ANARC05B.c">
       <Filter>Source Files\search</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\sorting_priority_queue\count_inversions_merge_sort.c">
+      <Filter>Source Files\sorting_priority_queue</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
