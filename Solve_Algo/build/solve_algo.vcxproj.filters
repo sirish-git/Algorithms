@@ -97,12 +97,6 @@
     <ClCompile Include="..\src\code_forces\code_forces_873c.c">
       <Filter>Source Files\z_Online Judges No-Category</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\trie\spoj_DICT.c">
-      <Filter>Source Files\trie</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\trie\spoj_PHONELST.c">
-      <Filter>Source Files\trie</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\trie\spoj_SUBXOR.c">
       <Filter>Source Files\trie</Filter>
     </ClCompile>
@@ -217,8 +211,23 @@
     <ClCompile Include="..\src\search\Pass_binary_search_prefix_sum_spoj_ANARC05B.c">
       <Filter>Source Files\search</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\sorting_priority_queue\count_inversions_merge_sort.c">
+    <ClCompile Include="..\src\sorting_priority_queue\Pass_count_inversions_merge_sort_spoj.c">
       <Filter>Source Files\sorting_priority_queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Hash\a_rolling_hash_spoj_adaclean.c">
+      <Filter>Source Files\Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\trie\Pass_spoj_DICT.c">
+      <Filter>Source Files\trie</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\trie\Pass_spoj_PHONELST.c">
+      <Filter>Source Files\trie</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graph\dfs\topological_sort_Spoj_Toposort.c">
+      <Filter>Source Files\Graph\dfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graph\bfs\small_topology_sort_bfs_priorQ_hacker_earth_practice.c">
+      <Filter>Source Files\Graph\bfs</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
