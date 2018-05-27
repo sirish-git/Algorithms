@@ -229,5 +229,8 @@
     <ClCompile Include="..\src\Graph\bfs\small_topology_sort_bfs_priorQ_hacker_earth_practice.c">
       <Filter>Source Files\Graph\bfs</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\mislen\fixed_point_analysis.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
