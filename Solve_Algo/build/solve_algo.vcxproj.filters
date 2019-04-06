@@ -232,5 +232,11 @@
     <ClCompile Include="..\src\mislen\fixed_point_analysis.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\trie\Pass_Codeforces_158c_directory_commands.c">
+      <Filter>Source Files\trie</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\srib_probs\Pass_prof_01_12_2018_match_5x5_Grid_3x3_pattern.c">
+      <Filter>Source Files\srib_probs</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,3 +1,9 @@
+/*
+	=> Problems to solve:
+	- https://www.hackerearth.com/practice/algorithms/sorting/merge-sort/tutorial/
+
+*/
+
 #include <stdio.h>
 
 #define INT_MAX		9999999

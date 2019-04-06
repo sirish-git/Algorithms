@@ -1,3 +1,9 @@
+/* 
+	=> Problems to solve:
+	- https://www.hackerearth.com/practice/algorithms/sorting/quick-sort/tutorial/
+
+*/
+
 #include <stdio.h>
 
 #define MAX_LEN		10001

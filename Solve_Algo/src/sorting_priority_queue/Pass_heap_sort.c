@@ -61,7 +61,7 @@ static void max_heap_sort(int len)
 		tmp = inp_ar[1];
 		inp_ar[1] = inp_ar[i];
 		inp_ar[i] = tmp;
-		//max heapify root element with reduces heap size
+		//max heapify root element with reduced heap size
 		max_heapify(1, i-1);
 	}
 }
