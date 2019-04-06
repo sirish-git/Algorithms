@@ -28,12 +28,17 @@ int read_input(struct _buf_info *buf_info, FILE *fp_inp_size, FILE *fp_inp_val)
 	idx = 0;
 	while (!feof(fp_inp_size))
 	{
+		if (idx >= (NUM_INP_FILES * NUM_QP_VALUES))
+		{
+			printf(" Error: Input buffer is not of expected size\n");
+			return FAILURE;
+		}
 		fscanf(fp_inp_size, "%d, ", &inp_size_per_qp[idx]);
 		idx++;
 	}
 	if (idx != (NUM_INP_FILES * NUM_QP_VALUES))
 	{
-		printf(" Error: Input is not of expected size\n");
+		printf(" Error: Input file is not of expected size\n");
 		return FAILURE;
 	}
 
@@ -41,6 +46,11 @@ int read_input(struct _buf_info *buf_info, FILE *fp_inp_size, FILE *fp_inp_val)
 	idx = 0;
 	while (!feof(fp_inp_val))
 	{
+		if (idx >= (NUM_INP_FILES * NUM_QP_VALUES))
+		{
+			printf(" Error: Input buffer is not of expected size\n");
+			return FAILURE;
+		}
 		fscanf(fp_inp_val, "%f, ", &inp_val_per_qp[idx]);
 		idx++;
 	}
