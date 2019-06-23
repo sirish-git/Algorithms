@@ -12,13 +12,6 @@ static signed long long N;
 static signed long long g_max_scr;
 
 
-/* Actual algo funciton */
-static void core_fn()
-{
-	signed long long i, j;
-	signed long long max;
-}
-
 void main()
 {
 	signed long long i, j;
@@ -29,9 +22,6 @@ void main()
 #endif
 	/* Read Inputs */
 	scanf("%I64d", &N);
-
-	/* algo function call */
-	core_fn();
 
 	printf("%I64d\n", g_max_scr);
 #ifdef WINDOWS_TEST
