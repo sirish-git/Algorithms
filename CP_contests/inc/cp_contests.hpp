@@ -39,10 +39,12 @@ typedef vector<pll> vpll;
 typedef vector<pss> vpss;
 typedef vector<pair<int, pii>> vpipii;
 typedef vector<vi> vvi; /*vector of vectors*/
+typedef vector<vpii> vvpii;
 typedef vector<vs> vvs;
 typedef deque<ll> dqll;
 typedef deque<pll> dqpll;
 typedef priority_queue<int> pqi;
+typedef priority_queue<pii> pqpii;
 typedef stack<int> stki;
 typedef queue<int> qi;
 
