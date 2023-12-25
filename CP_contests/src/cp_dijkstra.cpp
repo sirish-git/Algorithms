@@ -1,5 +1,6 @@
 #include "../inc/cp_utilities.hpp"
 
+/*Shortest path from single source to all nodes*/
 /*Note: distance in integers*/
 void dijkstra(vvpii &adj, vi &dist, int src, int N){        
     priority_queue<pii,vpii,greater<pii>> pq; //pair(dist,node)
@@ -13,9 +14,8 @@ void dijkstra(vvpii &adj, vi &dist, int src, int N){
         pq.pop();        
         visit[u]=1;
         loop(i,0,adj[u].size()){
-            int v=adj[u][i].fi, d2=adj[u][i].se;            
-            if(d1+d2<dist[v]){                
-                d2+=d1;
+            int v=adj[u][i].fi, d2=adj[u][i].se+d1;            
+            if(d2<dist[v]){
                 dist[v]=d2;
                 if(!visit[v])
                     pq.push({d2,v});
@@ -43,3 +43,6 @@ int main(){
     }
     return 0;
 }
+
+//Problems
+//https://leetcode.com/problems/minimum-cost-to-convert-string-i/description/

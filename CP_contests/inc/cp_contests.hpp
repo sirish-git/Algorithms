@@ -98,11 +98,13 @@ const int MOD = 1e9 + 7;
 /* simply disable DEBUG it to avoid effort removing debug code*/
 #define DEBUG 1
 #if DEBUG
-#define coutm(msg) cout << "\n" << msg << "\n";
+#define coutm(msg) cout << "\n" << msg;
 #define cout1(x) cout << #x << ":" << (x) << "\n"
 #define cout2(x,y) cout << #x << ":" << (x) << ", " << #y << ":" << (y) << "\n"
 #define cout3(x,y,z) cout << #x << ":" << (x) << ", " << #y << ":" << (y) << ", " << #z << ":" << (z) << "\n"
 #define cout4(x,y,z,a) cout << #x << ":" << (x) << ", " << #y << ":" << (y) << ", " << #z << ":" << (z) << ", " << #a << ":" << (a) << "\n"
+#define cout5(x,y,z,a,b) cout << #x << ":" << (x) << ", " << #y << ":" << (y) << ", " << #z << ":" << (z) << ", " << #a << ":" << (a) << ", " << #b << ":" << (b) << "\n"
+#define cout6(x,y,z,a,b,c) cout << #x << ":" << (x) << ", " << #y << ":" << (y) << ", " << #z << ":" << (z) << ", " << #a << ":" << (a) << ", " << #b << ":" << (b) << ", " << #c << ":" << (c) << "\n"
 #define coutvec(v) loop(cntrr,0,v.size()){cout << v[cntrr] << ", "; if(cntrr==v.size()-1) cout<<"\n";}
 #else
 #define coutm(msg)
@@ -110,6 +112,8 @@ const int MOD = 1e9 + 7;
 #define cout2(x,y)
 #define cout3(x,y,z)
 #define cout4(x,y,z,a)
+#define cout5(x,y,z,a,b)
+#define cout6(x,y,z,a,c)
 #define coutvec(v)
 #endif
 
