@@ -242,6 +242,21 @@ void multimap_basics(){
     cout<<"\n";       
 }
 
+void memset_test(){
+    int R=2,C=2;
+    ll ll2d[R][C], ll1d[R];
+    int i2d[R][C], i1d[R];
+    //mset(i2d,127);
+    msetll(ll2d,INFLL);
+    msetll(ll1d,INFLL);
+    mseti(i2d,INF);
+    mseti(i1d,INF);
+    loop(i,0,R){
+        loop(j,0,C){            
+            cout6(i,j,ll2d[i][j], i2d[i][j], ll1d[i], i1d[i]);
+        }
+    }    
+}
 
 int main(){
     vector_basics();
@@ -249,5 +264,6 @@ int main(){
     multiset_basics();
     map_basics();
     multimap_basics();
+    memset_test();
     return 0;
 }
