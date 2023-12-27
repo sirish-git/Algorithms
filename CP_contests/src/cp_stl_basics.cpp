@@ -258,6 +258,127 @@ void memset_test(){
     }    
 }
 
+void iteration_tests(){
+    {
+        vector<int> c={1,2,3,4};
+        coutm("vector iteration forward as elements")
+        {
+            itrfe(c, itr){
+                cout1(itr);
+            }
+        }
+        coutm("vector iteration forward as pointers")
+        {
+            itrf(c, itr){
+                cout1(*itr);
+            }
+        }    
+        coutm("vector iteration reverse as pointers")
+        {
+            itrr(c, itr){
+                cout1(*itr);
+            }
+        } 
+    }   
+    {
+        set<int> c={1,4,3,2};
+        coutm("set iteration forward as elements")
+        {
+            itrfe(c, itr){
+                cout1(itr);
+            }
+        }
+        coutm("set iteration forward as pointers")
+        {
+            itrf(c, itr){
+                cout1(*itr);
+            }
+        }    
+        coutm("set iteration reverse as pointers")
+        {
+            itrr(c, itr){
+                cout1(*itr);
+            }
+        } 
+    }    
+    {
+        map<int, int> c;
+        c[4]=44;
+        c[2]=22;
+        c[9]=99;
+        coutm("map iteration forward as elements")
+        {
+            itrfe(c, itr){
+                cout2(itr.fi,itr.se);
+            }
+        }
+        coutm("map iteration forward as pointers")
+        {
+            itrf(c, itr){
+                cout2(itr->fi,itr->se);
+            }
+        }    
+        coutm("map iteration reverse as pointers")
+        {
+            itrr(c, itr){
+                 cout2(itr->fi,itr->se);
+            }
+        } 
+    }       
+}
+void merge_union_tests(){
+    coutm("vector merge/union/intersect/diff")
+    {
+        vi v1={1,4,6,8},v2={4,5,8,9},v3, v4, v5, v6,v7;
+
+        coutm("merge vectors");
+        mergec(v1,v2,v3);
+        coutvec(v3);
+
+        coutm("union vectors");
+        unionc(v1,v2,v4);
+        coutvec(v4);        
+
+        coutm("intersect vectors");
+        intersectc(v1,v2,v5);
+        coutvec(v5);          
+
+        coutm("unique elements in 1st vectors");
+        difc(v1,v2,v6);
+        coutvec(v6);          
+
+        coutm("unique elements in 2nd vectors");
+        difc(v2,v1,v7);
+        coutvec(v7);          
+    }
+
+    coutm("set merge/union/intersect/diff")
+    {
+        set<int> v1={1,4,6,8},v2={4,5,8,9};
+        vector<int> v3, v4, v5, v6, v7;
+
+        coutm("merge sets");
+        mergec(v1,v2,v3);
+        coutvec(v3);
+
+        coutm("union sets");
+        unionc(v1,v2,v4);
+        coutvec(v4);        
+
+        coutm("intersect sets");
+        intersectc(v1,v2,v5);
+        coutvec(v5);          
+
+        coutm("unique elements in 1st set");
+        difc(v1,v2,v6);
+        coutvec(v6);          
+
+        coutm("unique elements in 2nd set");
+        difc(v2,v1,v7);
+        coutvec(v7);         
+    }    
+}
+
 int main(){
     vector_basics();
     set_basics();
@@ -265,5 +386,7 @@ int main(){
     map_basics();
     multimap_basics();
     memset_test();
+    iteration_tests();
+    merge_union_tests();
     return 0;
 }
