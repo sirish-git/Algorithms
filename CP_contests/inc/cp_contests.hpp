@@ -5,6 +5,11 @@
 #include <map>
 using namespace std;
 
+/* constants */
+const int INF = 1e9;
+const long long INFLL = 1e18;
+const int MOD = 1e9 + 7;
+
 /* alias */
 using ll = long long;
 using ld = long double;
@@ -22,7 +27,6 @@ typedef unordered_map<ll, ll> umll;
 typedef vector<int> vi;
 typedef vector<string> vs;
 typedef vector<ll> vll;
-typedef vector<vll> vvll;
 typedef vector<bool> vb;
 typedef multiset<int> msi;
 typedef multiset<string> mss;
@@ -41,6 +45,7 @@ typedef vector<pair<int, pii>> vpipii;
 typedef vector<vi> vvi; /*vector of vectors*/
 typedef vector<vpii> vvpii;
 typedef vector<vs> vvs;
+typedef vector<vll> vvll;
 typedef deque<ll> dqll;
 typedef deque<pll> dqpll;
 typedef priority_queue<int> pqi;
@@ -48,61 +53,69 @@ typedef priority_queue<pii> pqpii;
 typedef stack<int> stki;
 typedef queue<int> qi;
 
-/* macros on loops */
+/* macros for loops */
 #define loop(i,s,N) for(int i=(s);i<(N);++i)
 #define loopr(i,N) for(int i=(N-1);i>=0;--i) /*loop reverse*/
 #define itrfe(c, itr) for(auto itr:c) /*forward iteration on container elements*/
 #define itrf(c, itr) for(auto itr=c.begin(); itr!=c.end(); itr++) /*forward iteration on container*/
 #define itrr(c, itr) for(auto itr=c.rbegin(); itr!=c.rend(); itr++) /*forward iteration on container*/
-//#define ll long long
 
-/* macros on containers */
-#define pb(v, val) v.push_back(val) /* push back vector or sting*/
-#define pbp(v, val1, val2) v.push_back({val1,val2}) /*push back vector pair*/
-#define sorta(v) sort((v).begin(),(v).end()) /* sort ascending/forward vector or sting*/
-#define sortr(v) sort((v).begin(),(v).end(), greater<int>()) /*sort reverse/descend*/
-#define sorta_rng(v, idx1, idx2) sort((v).begin()+idx1,(v).begin()+idx2) /* sort a range*/
-#define insertv(v, val, pos) v.insert(v.begin()+pos, val) /*insert value in vector, string*/
-#define inserts(s, val) s.insert(val) /*insert value in set*/
-#define erasev(v, pos) v.erase(v.begin()+pos) /*erase a pos in vector*/
-#define erases(s, val) s.erase(val) /*erase a val in set*/
-//#define removev(v, val) remove((v).begin(),(v).end(), val) /*remove matched val in vector*/
-#define mset(buf, val) memset(buf,val,sizeof(buf)) /*Note: use for 0 or -1*/
-void mseti_fn(int *buf, int val, int lpcnt){loop(i,0,lpcnt){buf[i]=val;}}
-#define mseti(buf, val) mseti_fn((int*)buf, val, sizeof(buf)/sizeof(int))
-void msetll_fn(ll *buf, ll val, ll lpcnt){loop(i,0,lpcnt){buf[i]=val;}}
-#define msetll(buf, val) msetll_fn((ll*)buf, val, sizeof(buf)/sizeof(ll))
-#define fillv(v, val) fill(v.begin(), v.end(), val) /*fill vector with a value*/
-#define resizev(v, sz) v.resize(sz) /*resize vector*/
-#define maxe(v) *max_element((v).begin(),(v).end()) /* max element in vector*/
-#define mine(v) *min_element((v).begin(),(v).end()) /* min element in vector*/
-#define maxp(v) max_element((v).begin(),(v).end()) /* max pointer*/
-#define minp(v) min_element((v).begin(),(v).end()) /* min pointer*/
-#define maxs(s) *max_element((s).begin()) /* max element in set*/
-#define mins(s) *min_element((s).rbegin()) /* min element in set*/
-#define bs(v, val) binary_search(v.begin(), v.end(), val)
-#define bs_rng(v, val, idx1, idx2) binary_search(v.begin()+idx1, v.begin()+idx2, val) /*binary search in a range*/
-#define lb(v, val) lower_bound(v.begin(), v.end(), val)
-#define ub(v, val) upper_bound(v.begin(), v.end(), val)
-//#define mp(val1, val2) make_pair(val1, val2) /*simply use {val1, val2}*/
+/* macros for names*/
 #define allc(c) (c).begin(),(c).end() /*all element in container*/
 #define fi first
 #define se second
 #define be begin()
 #define en end()
-#define bitcnt __builtin_popcount /*number of bits in a value*/
+//#define ll long long
+
+/* macros for push, sort, insert, erase*/
+#define pb(v, val) v.push_back(val) /* push back vector or sting*/
+#define pbp(v, val1, val2) v.push_back({val1,val2}) /*push back vector pair*/
+#define sorta(c) sort(allc(c)) /* sort ascending/forward vector or sting*/
+#define sortr(c) sort(allc(c), greater<int>()) /*sort reverse/descend*/
+#define sorta_rng(v, idx1, idx2) sort((v).begin()+idx1,(v).begin()+idx2) /* sort a range*/
+#define insertv(v, val, pos) v.insert(v.begin()+pos, val) /*insert value in vector, string*/
+#define inserts(s, val) s.insert(val) /*insert value in set*/
+#define erasev(v, pos) v.erase(v.begin()+pos) /*erase a pos in vector*/
+#define erases(s, val) s.erase(val) /*erase a val in set*/
+//#define removev(v, val) remove(allc(v), val) /*remove matched val in vector*/
+
+/* macros for memset, fill, resize */
+#define mset(buf, val) memset(buf,val,sizeof(buf)) /*Note: use for 0 or -1*/
+void mseti_fn(int *buf, int val, int lpcnt){loop(i,0,lpcnt){buf[i]=val;}}
+#define mseti(buf, val) mseti_fn((int*)buf, val, sizeof(buf)/sizeof(int))
+void msetll_fn(ll *buf, ll val, ll lpcnt){loop(i,0,lpcnt){buf[i]=val;}}
+#define msetll(buf, val) msetll_fn((ll*)buf, val, sizeof(buf)/sizeof(ll))
+#define fillv(v, val) fill(allc(v), val) /*fill vector with a value*/
+#define resizev(v, sz) v.resize(sz) /*resize vector*/
+
+/* macros for max, min, find*/
+#define maxe(v) *max_element(allc(v)) /* max element in vector*/
+#define mine(v) *min_element(allc(v)) /* min element in vector*/
+#define maxp(v) max_element(allc(v)) /* max pointer*/
+#define minp(v) min_element(allc(v)) /* min pointer*/
+#define maxs(s) *max_element((s).begin()) /* max element in set*/
+#define mins(s) *min_element((s).rbegin()) /* min element in set*/
 /* macros for sets */
 #define finds(s, val) s.find(val) /*finds val in set, returns iterator; use member fn instead of global fn find*/
 #define presents(s, val) (s.find(val)!=s.end())
 #define nexts(s, idx) next(s.begin()+idx) /* next element in set*/
 
-/* macros: more utility functions */
-#define sumv(v) accumulate(v.begin(), v.end(), 0LL) /*sum all values in vector*/
+/* macros for binary search*/
+#define bs(v, val) binary_search(allc(v), val)
+#define bs_rng(v, val, idx1, idx2) binary_search(v.begin()+idx1, v.begin()+idx2, val) /*binary search in a range*/
+#define lb(v, val) lower_bound(allc(v), val)
+#define ub(v, val) upper_bound(allc(v), val)
+//#define mp(val1, val2) make_pair(val1, val2) /*simply use {val1, val2}*/
+#define bitcnt __builtin_popcount /*number of bits in a value*/
+
+/* macros for sum, gc, rotate, reverse*/
+#define sumv(v) accumulate(allc(v), 0LL) /*sum all values in vector*/
 #define gcd(a,b) __gcd(a,b)
 #define lcm(a,b)  (a/__gcd(a,b))*b
 #define rotatev(v, it) rotate((v).begin(), it, (v).end()) /*rotate values, element at iterator becomes first */
-#define reversev(v) reverse((v).begin(),(v).end()) /*reverse the order of elements*/
-#define countv(v, val) count(v.begin(), v.end(), val) /*counts occuranaces of val*/
+#define reversev(v) reverse(allc(v)) /*reverse the order of elements*/
+#define countv(v, val) count(allc(v), val) /*counts occuranaces of val*/
 
 /* macros for opertions on sorted containers*/
     /* Note: input containers must be soreted.
@@ -115,16 +128,11 @@ void msetll_fn(ll *buf, ll val, ll lpcnt){loop(i,0,lpcnt){buf[i]=val;}}
 //compare 2 strings lexographic, true if first is smaller
 #define lexcomp(s1, s2) lexicographical_compare(s1.begin(), s1.end(), s2.begin(), s2.end());
 #define nextperm(s) next_permutation(s.begin(), s.end())
-// heap algorithms
-#define makeheap(v) make_heap(v.begin(), v.end())
-#define pushheap(v) push_heap(v.begin(), v.end())
-#define popheap(v) pop_heap(v.begin(), v.end())
-#define sortheap(v) sort_heap(v.begin(), v.end())
-
-/* constants */
-const int INF = 1e9;
-const ll INFLL = 1e18;
-const int MOD = 1e9 + 7;
+/* heap algorithms*/
+#define makeheap(v) make_heap(allc(v))
+#define pushheap(v) push_heap(allc(v))
+#define popheap(v) pop_heap(allc(v))
+#define sortheap(v) sort_heap(allc(v))
 
 /* simply disable DEBUG it to avoid effort removing debug code*/
 #define DEBUG 1
