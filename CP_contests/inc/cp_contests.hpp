@@ -77,6 +77,7 @@ typedef queue<int> qi;
 #define insertv(v, val, pos) v.insert(v.begin()+pos, val) /*insert value in vector, string*/
 #define inserts(s, val) s.insert(val) /*insert value in set*/
 #define erasev(v, pos) v.erase(v.begin()+pos) /*erase a pos in vector*/
+#define erasev_rng(v, pos1, pos2) v.erase(v.begin()+pos1, v.begin()+pos2) /*erase a pos in vector*/
 #define erases(s, val) s.erase(val) /*erase a val in set*/
 //#define removev(v, val) remove(allc(v), val) /*remove matched val in vector*/
 
@@ -94,6 +95,8 @@ void msetll_fn(ll *buf, ll val, ll lpcnt){loop(i,0,lpcnt){buf[i]=val;}}
 #define mine(v) *min_element(allc(v)) /* min element in vector*/
 #define maxp(v) max_element(allc(v)) /* max pointer*/
 #define minp(v) min_element(allc(v)) /* min pointer*/
+#define maxe_rng(v,id1,id2) *max_element((v).be+id1,(v).be+id2) /* max element in vector*/
+#define mine_rng(v,id1,id2) *min_element((v).be+id1,(v).be+id2) /* max element in vector*/
 #define maxs(s) *max_element((s).begin()) /* max element in set*/
 #define mins(s) *min_element((s).rbegin()) /* min element in set*/
 /* macros for sets */
@@ -111,6 +114,7 @@ void msetll_fn(ll *buf, ll val, ll lpcnt){loop(i,0,lpcnt){buf[i]=val;}}
 
 /* macros for sum, gc, rotate, reverse*/
 #define sumv(v) accumulate(allc(v), 0LL) /*sum all values in vector*/
+#define sumv_rng(v,idx1,idx2) accumulate((v).be+idx1, (v).be+idx2, 0LL) /*sum range of values in vector*/
 #define gcd(a,b) __gcd(a,b)
 #define lcm(a,b)  (a/__gcd(a,b))*b
 #define rotatev(v, it) rotate((v).begin(), it, (v).end()) /*rotate values, element at iterator becomes first */
@@ -152,7 +156,7 @@ void msetll_fn(ll *buf, ll val, ll lpcnt){loop(i,0,lpcnt){buf[i]=val;}}
 #define cout3(x,y,z)
 #define cout4(x,y,z,a)
 #define cout5(x,y,z,a,b)
-#define cout6(x,y,z,a,c)
+#define cout6(x,y,z,a,b,c)
 #define coutvec(v)
 #endif
 
